@@ -29,8 +29,9 @@ db.on('error', err => {
     console.log(err);
 })
 
-
 app.use("/api", routes);
+
+app.use(express.static(__dirname + '/favicon.ico'))
 
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3001;
