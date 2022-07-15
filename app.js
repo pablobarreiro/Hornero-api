@@ -36,9 +36,10 @@ app.use(express.static(__dirname + '/favicon.ico'))
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 3001;
 
-app.listen(port, host, () => {
-    console.log("Server is running correctly");
-})
+app.listen(port, err => {
+    if(err) throw err;
+    console.log("%c Server running", "color: green");
+  });
 
 
 
