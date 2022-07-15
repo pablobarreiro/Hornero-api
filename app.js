@@ -4,7 +4,6 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const morgan = require("morgan");
-const password = require("./config/password");
 
 const user = require("./models/Users");
 const routes = require("./routes/index");
